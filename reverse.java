@@ -1,18 +1,15 @@
-import java.util.Scanner;
-
 class J
 {
-    public static void main(String args[])
-    {
-        int i;
-        System.out.println("Enter any number: ");
-        Scanner y=new Scanner(System.in);
-        i=y.nextInt();
-        while(i>0)
-        {
-           int j=i%10;
-            System.out.print(j);
-            i=i/10;
-        }
-    }
+	public static void main(String args[])
+	{
+		int n = 12,m;
+		int sum = 0;
+		while(n!=0)
+		{
+			m = n % 10;
+			sum = (sum*10) + m;
+			m = m/10;
+		}
+		System.out.println(n);
+	}
 }

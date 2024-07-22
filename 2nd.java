@@ -1,12 +1,7 @@
-import java.util.*;
-class J
+class Jyoti
 {
-	public static void main(String args[])
+	public static void main(String [] args)
 	{
-		int i;
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter a number");
-		i=sc.nextInt();
-		System.out.println(i);
+		System.out.println("Welcome to Jyoti's World.........");
 	}
 }
