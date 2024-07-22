@@ -1,15 +1,15 @@
-import java.util.*;
-class J
+import java.util.Scanner;
+class N
 {
-    public static void main(String args[])
-    {
-        int i,j,k=0;
-        System.out.println("Enter a number:");
-        Scanner sc=new Scanner(System.in);
-        i=sc.nextInt();
-        System.out.println("Enter another a number:");
-        j=sc.nextInt();
-        k=i+j;
-        System.out.println("The addition is:"+k);
-    }
+	public static void main(String args[])
+	{
+		int a,b,c;
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a Number:");
+		a=s.nextInt();
+		System.out.println("Enetr another a number:");
+		b=s.nextInt();
+		c=a+b;
+		System.out.println("The addition is:"+c);
+	}
 }
