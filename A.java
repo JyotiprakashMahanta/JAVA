@@ -1,18 +1,11 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-public class A
-{
-	static Object arr[];
-	static
-	{
-	arr=new Object[10000];
-	for(int i=0;i<=arr.length-1;i++)
-	arr[i];
+package APL_Documention;
+
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Hello Jyoti");
+
 	}
-void arrayList()
-	{
-		long start,end;
-		start=System.currentTimeMillis;
-		//for(:arr)
-	}
+
 }

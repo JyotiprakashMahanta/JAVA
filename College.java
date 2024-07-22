@@ -1,30 +1,44 @@
-class College 
-{
-	public static void main(String[] args) 
-	{
-		//creating instance from class Student Rama and Hari Object 
-		Student s1=new Student();
-		Student s2=new Student();
-		//initialization s1 instance with Ram object values
-		s1.sno=101;
-		s1.sname="Ram";
-		s1.course="CJ";
-		s1.fee=3500;
+import java.util.Scanner;
+class College{
 
-		//initialization s2 instance with Hari object values
-		s2.sno=102;
-		s2.sname="Hari";
-		s2.course="Painting";
-		s2.fee=5000;
-		System.out.println("\ns1 object Values\n");
-		System.out.println("s1.sno: \t"+s1.sno);
-		System.out.println("s1.sname: \t"+s1.sname);
-		System.out.println("s1.course: \t"+s1.course);
-		System.out.println("s1.fee: \t"+s1.fee);
-		System.out.println("\ns2 object Values\n");
-		System.out.println("s2.sno: \t"+s2.sno);
-		System.out.println("s2.sname: \t"+s2.sname);
-		System.out.println("s2.course: \t"+s2.course);
-		System.out.println("s2.fee: \t"+s2.fee);
+	public static void main(String[] args){
+	
+		Student s1=new Student();
+		
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.print("Enter sno \t\t:");
+		s1.sno	=sc.nextInt(); sc.nextLine();
+		
+		System.out.print("Enter sname \t\t:");
+		s1.sname=sc.nextLine();
+		
+		System.out.print("Enter course \t\t:");
+		s1.course	=sc.nextLine();
+		
+		System.out.print("Enter fee \t\t:");
+		s1.fee	=sc.nextDouble();
+		
+		System.out.print("Enter email \t\t:");
+		s1.email	=sc.next();
+		
+		System.out.print("Enter mobile \t\t:");
+		s1.mobile	=sc.nextLong();
+		
+		System.out.print("Enter gender \t\t:");
+		s1.gender	=sc.next().charAt(0);
+		
+		System.out.print("Enter studing \t\t:");
+		s1.studing	=sc.nextBoolean();
+		System.out.println("\nStudent Information:");
+		System.out.println("sno \t\t\t :"+ s1.sno);
+		System.out.println("sname \t\t\t :"+ s1.sname);
+		System.out.println("course \t\t\t :"+ s1.course);
+		System.out.println("fee \t\t\t :"+ s1.fee);
+		System.out.println("email \t\t\t :"+ s1.email);
+		System.out.println("mobile \t\t\t :"+ s1.mobile);
+		System.out.println("gender \t\t\t :"+ s1.gender);
+		System.out.println("studing \t\t\t :"+ s1.studing);
+		
 	}
 }

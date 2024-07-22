@@ -1,16 +1,20 @@
-import java.util.*;
+class  Replace
+{
+	void Box()
+	{
+		
+		String s1="Karismita";
+		String s2=s1.replace("K","R");
+		System.out.println(s2);
+	}
 
-class J {
-    public static void main(String args[]) {
-        Scanner s = new Scanner(System.in);
-        System.out.print("Enter i= ");
-        int i = s.nextInt();
-        System.out.print("Enter j= ");
-        int j = s.nextInt();
-        i = i + j;
-        j = i - j;
-        i = i - j;
-        System.out.println("the value of i= " + i);
-        System.out.println("the value of j= " + j);
-    }
+}
+class Dis
+{
+	public static void main(String args[])
+	{
+		Replace c1=new Replace();
+		c1.Box();
+	}
+
 }

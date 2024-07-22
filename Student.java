@@ -1,10 +1,10 @@
-class Person
-{
-}
-class Student extends Person
-{
-	
-}
-class Emp extends Person
-{
+class Student{
+	int sno;
+	String sname;
+	String course;
+	double fee;
+	String email;
+	long mobile;
+	char gender;
+	boolean studing;
 }
