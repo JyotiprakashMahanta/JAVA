@@ -1,16 +1,19 @@
-class Addition 
+import java.util.Scanner;
+class  Addition
 {
 	public static void main(String[] args) 
 	{
-		int a =Integer.parseInt(args[0]);
-		int b =Integer.parseInt(args[1]);
-		char d =args[2].charAt(0);
-		double u=Double.parseDouble(args[3]);
-		String s=args[4];
-		int c=a+b;
-		System.out.println(c);
-		System.out.println(d);
-		System.out.println(u);
-		System.out.println(s);
+		Scanner sc=new Scanner(System.in);
+		int i=sc.nextInt();
+		int j=sc.nextInt();
+		int res=0;
+		while (i<=j)
+		{
+			int k=i;
+			System.out.println("first value: "+i+"second value: "+k+" result"+res);
+			res+=i;
+			 k=i++;
+		}
+		System.out.println("the sum of between "+i+" to "+" k "+res);
 	}
 }
