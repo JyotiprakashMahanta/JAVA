@@ -1,4 +1,4 @@
-class  Prime_Number
+class  Prime_Number_Between_100_2500
 {
 	public static void main(String[] args) 
 	{
