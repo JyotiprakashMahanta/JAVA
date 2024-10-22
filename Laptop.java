@@ -1,29 +1,20 @@
-//package super_method_dot;
+package Non_Primitive_Array;
 
 public class Laptop {
-	String brand;
+	String name;
+	double storage;
 	double price;
-	String color;
-	boolean avi;
-	public Laptop(String brand,double price,String color,boolean avi){
-		this.brand=brand;
-		this.price=price;
-		this.color=color;
-		this.avi=avi;
+	int ram;
+	public Laptop(String n,double s,double p,int r) {
+//		super();
+		// TODO Auto-generated constructor stub
+		this.name=n;
+		this.storage=s;
+		this.price=p;
+		this.ram=r;
 	}
-	Laptop(String brand,double price,boolean avi){
-		this.brand=brand;
-		this.price=price;
-		this.avi=avi;
-	}
-	void details() {
-		System.out.println("name: "+this.brand);
-		System.out.println("price: "+this.price);
-		if (color!=null)
-		{
-			System.out.println("color: "+this.color);
-		}
-		System.out.println("avilable: "+this.avi);
-		System.out.println("\n\n=================================================\n");
+	@Override
+	public String toString() {
+		return "Laptop [name=" + name + ", storage=" + storage + ", price=" + price + ", ram=" + ram + "]";
 	}
 }
