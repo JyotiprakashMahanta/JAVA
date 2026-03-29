@@ -1,0 +1,162 @@
+package Divisible_Rule;
+
+import java.util.Scanner;
+
+public class Divisibility_rule {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		boolean loop=true;
+		while (loop) {
+			System.out.println("Enter a number:");
+			try {
+				int num = scanner.nextInt();
+				System.out.println("Enter a number to which you want to divided with. e.g. 1,2,3,..11 ");
+				int option = scanner.nextInt();
+				switch (option) {
+				case 1:
+//					Every number is divisible by 1
+					System.out.println("Always Divisibility by 1");
+					break;
+				case 2:
+					System.out.println(isDivideWithTwo(num));
+					break;
+				case 3:
+					System.out.println(isDivideWithThree(num));
+					break;
+				case 4:
+					System.out.println(isDivideWithFour(num));
+					break;
+				case 5:
+					System.out.println(isDivideWithFive(num));
+					break;
+				case 6:
+					System.out.println(isDivideWithSix(num));
+					break;
+				case 7:
+					System.out.println(isDivideWithSeven(num));
+					break;
+				case 8:
+					System.out.println(isDivideWithEight(num));
+					break;
+				case 9:
+					System.out.println(isDivideWithNine(num));
+					break;
+				case 10:
+					System.out.println(isDivideWithTen(num));
+					break;
+				case 11:
+					System.out.println(isDivideWithEleven(num));
+					break;
+				default:
+					System.out.println("Sorry u choose a invalid option");
+					break;
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+				System.out.println("Pls enter a valid number");
+				scanner.nextLine();
+			}
+			System.out.println("-------------------------\nif want to continue this operation press 1 else 0");
+			int flag=scanner.nextInt();
+			if(flag==0) {
+				loop=false;
+			}
+		}
+		System.out.println("Thank You Have a good day");
+	}
+//	Difference between sum of alternate digits is divisible by 11
+	private static boolean isDivideWithEleven(int num) {
+		// TODO Auto-generated method stub
+		int sumOfEvenDigit=0;
+		int sumOfOddDigit=0;
+		int eoo=1;
+		while(num>0) {
+			int d=num%10;
+			if(eoo%2==0) {
+				sumOfEvenDigit+=d;
+			}else {
+				sumOfOddDigit+=d;
+			}
+			num=num/10;
+			eoo++;
+		}
+		return (sumOfEvenDigit-sumOfOddDigit)%11==0;
+	}
+//	Last digit must be 0
+	private static boolean isDivideWithTen(int num) {
+		// TODO Auto-generated method stub
+		return num%10==0;
+	}
+//	Sum of digits divisible by 9
+	private static boolean isDivideWithNine(int num) {
+		// TODO Auto-generated method stub
+		while (70<num) {
+			int sumOfNumber=0;
+			while(num>0) {
+				int d=num%10;
+				sumOfNumber+=d;
+				num=num/10;
+			}
+			return sumOfNumber%9==0;
+		}
+		return num%7==0;
+	}
+//	Last 3 digits divisible by 8
+	private static boolean isDivideWithEight(int num) {
+		// TODO Auto-generated method stub
+		int l = num % 10;
+		num = num / 10;
+		int sl = num % 10;
+		num = num / 10;
+		int threeNumber = num % 10;
+		int lastThreeDigit = threeNumber * 100 + sl * 10 + l;
+		return lastThreeDigit % 8 == 0;
+	}
+//	Double the last digit and subtract from remaining number
+	private static boolean isDivideWithSeven(int num) {
+		// TODO Auto-generated method stub
+		int last = num % 10 * 2;
+		num = num / 10;
+		int res = num - last;
+		return res % 7 == 0;
+	}
+//	Must satisfy BOTH: divisible by 2	& divisible by 3
+	private static boolean isDivideWithSix(int num) {
+		// TODO Auto-generated method stub
+		return isDivideWithTwo(num) && isDivideWithThree(num);
+	}
+//	Last digit should be 0 or 5
+	private static boolean isDivideWithFive(int num) {
+		// TODO Auto-generated method stub
+		int last = num % 10;
+		return last == 0 || last == 5;
+	}
+//	Last digit should be even (0, 2, 4, 6, 8)
+	private static boolean isDivideWithTwo(int n) {
+		int lastDigit = n % 10;
+		if (lastDigit % 2 == 0) {
+			return true;
+		}
+		return false;
+	}
+//	Sum of digits divisible by 3
+	private static boolean isDivideWithThree(int n) {
+		int total = 0;
+		while (n > 0) {
+			int lastDigit = n % 10;
+			total += lastDigit;
+			n = n / 10;
+		}
+		return total % 3 == 0;
+	}
+
+	private static boolean isDivideWithFour(int num) {
+		// Last 2 digits divisible by 4
+		int storeToCheck = 0;
+		int lastD = num % 10;
+		num = num / 10;
+		int sLastDigit = num % 10;
+		storeToCheck = sLastDigit * 10 + lastD;
+		return storeToCheck % 4 == 0;
+	}
+}
