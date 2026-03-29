@@ -1,0 +1,12 @@
+package SwingAPI;
+
+import javax.swing.*;
+
+public class MyFirstGUI {
+	public static void main(String[] args) {
+		JFrame frame=new JFrame("My First App");
+		frame.setSize(700, 700);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// when frame page close automatic java program also terminate
+		frame.setVisible(true);
+	}
+}
