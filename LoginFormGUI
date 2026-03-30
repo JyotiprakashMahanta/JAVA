@@ -1,0 +1,50 @@
+package SwingAPI;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class LoginGUI {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("My Login Form");
+		JLabel uLabel = new JLabel("User Name");
+		JTextField field = new JTextField();
+		JLabel pLabel = new JLabel("Password");
+		JPasswordField jPasswordField = new JPasswordField();
+		JButton jButton = new JButton("Login");
+		frame.setLayout(null);
+		uLabel.setBounds(50, 50, 100, 30);
+		field.setBounds(150, 50, 150, 30);
+		pLabel.setBounds(50, 100, 100, 30);
+		jPasswordField.setBounds(150, 100, 150, 30);
+		jButton.setBounds(150, 150, 100, 30);
+		jButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String un=field.getText();
+				String pass=new String(jPasswordField.getPassword());
+				if(un.equals("Admin")&&pass.equals("1234")) {
+					JOptionPane.showMessageDialog(jButton, "Login Sucessful");
+				}else {
+					JOptionPane.showMessageDialog(jButton, "Sorry Invalid Credinatinal");
+				}
+			}
+		});
+		frame.add(uLabel);
+		frame.add(field);
+		frame.add(pLabel);
+		frame.add(jPasswordField);
+		frame.add(jButton);
+		frame.setSize(400, 300); 	
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+}
